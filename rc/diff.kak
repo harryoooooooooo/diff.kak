@@ -123,9 +123,9 @@ diff-disable: Hide the diff flags and disable the update hook.' \
 
 declare-option -hidden int-list diff_hunk_list
 define-command -docstring '
-diff-jump [next|prev]: Jump to next|prev diff hunk.' \
+diff-jump-hunk [next|prev]: Jump to next|prev diff hunk of the current file.' \
     -shell-script-candidates %{ printf 'next\nprev\n' } \
-    -params 1 diff-jump %{ evaluate-commands %sh{
+    -params 1 diff-jump-hunk %{ evaluate-commands %sh{
 
     direction=$1
 
